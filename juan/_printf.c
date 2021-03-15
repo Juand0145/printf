@@ -1,14 +1,5 @@
 #include "holberton.h"
 
-/**
-* _printf - C - printf
-* @format: Input string with specifiers
-*
-* Description: A function that produces output
-* according to a given format.
-* Return: Number of characters printed (excluding
-* the null byte used to end output to strings).
-*/
 int _printf(const char *format, ...)
 {
 	int i, j;
@@ -16,19 +7,22 @@ int _printf(const char *format, ...)
 	va_list arg;
 
 	specifier select_spec[] = {
-		{"c", op_ch}, {"%", op_pr},
-		{"s", op_st}, {"d", op_nu},
-		{"i", op_in}, {"f", op_fl},
+		{"c", op_ch},
+		{"%", op_pr},
+		{"s", op_st},
+		{"d", op_nu},
+		{"i", op_in},
+		{"f", op_fl},
 		{NULL, NULL}
-		};
-
-	n_words = 0;
-	n_func = 6;
+	};
 
 	if (format == NULL)
 		return (0);
 
 	va_start(arg, format);
+
+	n_func = 6;
+	n_words = 0;
 
 	for (i = 0; format[i]; i++)
 	{
@@ -50,5 +44,6 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(arg);
+
 	return (n_words);
 }

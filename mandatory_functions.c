@@ -24,8 +24,13 @@ int op_ch(va_list arg)
 */
 int op_pr(va_list arg)
 {
+	int i;
+
+	i = va_arg(arg,int);
 	_putchar('%');
-	return (1);
+
+	i = 1;
+	return (i);
 }
 
 /**
