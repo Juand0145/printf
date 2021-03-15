@@ -16,21 +16,17 @@ int _printf(const char *format, ...)
 	va_list arg;
 
 	specifier select_spec[] = {
-		{"c", op_ch}, {"%", op_pr},
-		{"s", op_st}, {"d", op_nu},
-		{"i", op_in}, {"f", op_fl},
-		{NULL, NULL}
-		};
+		{"c", op_ch}, {"s", op_st}, {"d", op_nu},
+		{"i", op_in}, {"f", op_fl}, {NULL, NULL}};
 
 	n_words = 0;
-	n_func = 6;
-
+	n_func = 5;
 	if (format == NULL)
 		return (0);
 
 	va_start(arg, format);
 
-	for (i = 0; format[i]; i++)
+	for (i = 0; format[i] && format != NULL; i++)
 	{
 		if (format[i] != '%')
 			n_words = n_words + _putchar(format[i]);
@@ -45,10 +41,13 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
+
+			if (format[i + 1] == '%')
+				n_words = n_words + _putchar('%');
+
 			i++;
 		}
 	}
-
 	va_end(arg);
 	return (n_words);
 }

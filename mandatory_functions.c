@@ -16,24 +16,6 @@ int op_ch(va_list arg)
 }
 
 /**
-* op_pr - Print a percentage
-* @arg: variadic arguments
-*
-* Description: Function to print a % as special character
-* Return: Number of char printed (1)
-*/
-int op_pr(va_list arg)
-{
-	int i;
-
-	i = va_arg(arg, int);
-	_putchar('%');
-
-	i = 1;
-	return (i);
-}
-
-/**
 * op_st - Print a string
 * @arg: variadic arguments
 *
@@ -48,6 +30,7 @@ int op_st(va_list arg)
 	str2 = va_arg(arg, char *);
 
 	if (str2 == NULL)
+	{
 		_putchar('(');
 		_putchar('n');
 		_putchar('u');
@@ -55,6 +38,7 @@ int op_st(va_list arg)
 		_putchar('l');
 		_putchar(')');
 		return (0);
+	}
 
 	for (i = 0; str2[i] != '\0'; i++)
 		_putchar(str2[i]);

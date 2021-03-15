@@ -10,7 +10,6 @@
 /*Mandatory functions*/
 int _printf(const char *format, ...);
 int op_ch(va_list arg);
-int op_pr(va_list arg);
 int op_st(va_list arg);
 int op_nu(va_list arg);
 int op_in(va_list arg);
