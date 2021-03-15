@@ -26,7 +26,7 @@ int op_pr(va_list arg)
 {
 	int i;
 
-	i = va_arg(arg,int);
+	i = va_arg(arg, int);
 	_putchar('%');
 
 	i = 1;
@@ -48,6 +48,12 @@ int op_st(va_list arg)
 	str2 = va_arg(arg, char *);
 
 	if (str2 == NULL)
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
 		return (0);
 
 	for (i = 0; str2[i] != '\0'; i++)
