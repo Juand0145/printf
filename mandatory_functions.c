@@ -43,7 +43,6 @@ int op_st(va_list arg)
 	for (i = 0; str2[i] != '\0'; i++)
 		_putchar(str2[i]);
 
-	_putchar('\0');
 	return (i);
 }
 
@@ -62,6 +61,8 @@ int op_nu(va_list arg)
 
 	num = va_arg(arg, int);
 
+	if (num == 0)
+		digits = 1;
 	if (num < 0)
 	{
 		num = -num;
@@ -93,6 +94,9 @@ int op_in(va_list arg)
 	int digits;
 
 	num = va_arg(arg, int);
+
+	if (num == 0)
+		digits = 1;
 
 	if (num < 0)
 	{
