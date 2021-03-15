@@ -15,7 +15,7 @@ _printf \[en] print data with a respective format.
 .SH DESCRIPTION
 .PP
 This function prints all arguments to variadic function considering the format.
-\f[B]FORMAT:\f[R]
+\f[B]FORMATS:\f[R]
 .PP
 \f[B]%\f[R] - Prints % character.
 .PP
