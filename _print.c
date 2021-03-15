@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 		}
 	}
 
-	_putchar('\0');
+	
 	va_end(arg);
 	return (n_words);
 }
