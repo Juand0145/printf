@@ -18,25 +18,24 @@ if (!str)
 	_printf("(null)");
 	return (6);
 }
-	for (; str[i]; i++)
+for (; str[i]; i++)
+{
+	h = 0;
+	for (j = 0; letter[j]; j++)
 	{
-		h = 0;
-		for (j = 0; letter[j]; j++)
+		if (str[i] == letter[j])
 		{
-			if (str[i] == letter[j])
-			{
-				_putchar(rotcode[j]);
-				h = 1;
-				count++;
-			}
-		}
-		if (!h)
-		{
-			_putchar(str[i]);
+			_putchar(rotcode[j]);
+			h = 1;
 			count++;
 		}
-
 	}
+	if (!h)
+	{
+		_putchar(str[i]);
+		count++;
+	}
+}
 
-	return (count);
+return (count);
 }
