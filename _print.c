@@ -23,7 +23,6 @@ int _printf(const char *format, ...)
 	n_func = 5;
 	if (format == NULL)
 		return (0);
-
 	va_start(arg, format);
 
 	for (i = 0; format[i] != '\0' && format != NULL; i++)
@@ -48,8 +47,6 @@ int _printf(const char *format, ...)
 			i++;
 		}
 	}
-
-	_putchar('\0');
 	va_end(arg);
 	return (n_words);
 }
