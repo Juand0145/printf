@@ -33,5 +33,8 @@ i = j = count = 0;
 			}
 		}
 	}
+	else
+		_printf("(null)");
+
 	return (count);
 }
