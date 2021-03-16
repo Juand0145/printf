@@ -20,7 +20,7 @@ int _putchar(char c);
 void print_number(int n);
 
 /**
-* struct specifier - Printf structure
+* struct specifier - structure
 * @ch: character with the specifier
 * @f: Function associated
 *

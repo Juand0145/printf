@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* _printf - C - printf
+* _printf - C - function that give number of chars
 * @format: Input string with specifiers
 *
 * Description: A function that produces output
