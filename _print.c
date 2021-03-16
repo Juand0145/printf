@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		{"f", op_fl}, {"b", op_bi}, {"R", _rot13}, {NULL, NULL}};
 
 	n_words = 0;
-	n_func = 6;
+	n_func = 7;
 	if (format == NULL)
 		return (0);
 	va_start(arg, format);
