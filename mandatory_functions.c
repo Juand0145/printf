@@ -70,13 +70,11 @@ int op_nu(va_list arg)
 
 	print_number(num);
 
-	while (num % 10 != 0)
+	while (num != 0)
 	{
 		digits++;
 		num = num / 10;
 	}
-
-	digits += 1;
 
 	return (digits);
 }
