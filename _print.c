@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	n_words = 0;
 	n_func = 7;
 	if (format == NULL)
-		return (0);
+		return (-1);
 	va_start(arg, format);
 
 	for (i = 0; format[i] != '\0' && format != NULL; i++)
