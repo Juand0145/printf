@@ -16,6 +16,7 @@ int op_nu(va_list arg);
 /*Advanced functions*/
 int op_fl(va_list arg);
 int op_bi(va_list arg);
+int _rot13(va_list agr);
 
 /*Other useful functions*/
 int count(const char *str);
