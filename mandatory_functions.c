@@ -59,7 +59,7 @@ int op_nu(va_list arg)
 	if (!num)
 		return (0);
 
-	if (num + '0' == '0')
+	if (num == 0)
 		digits += 1;
 
 	if (num < 0)
