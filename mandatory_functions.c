@@ -65,7 +65,6 @@ int op_nu(va_list arg)
 	if (num < 0)
 	{
 		num = -num;
-		_putchar('-');
 		digits = 1;
 	}
 
