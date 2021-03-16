@@ -77,39 +77,3 @@ int op_nu(va_list arg)
 
 	return (digits);
 }
-
-/**
-* op_in - Print a integer number
-* @arg: variadic arguments
-*
-* Description: Function to print a number
-* Return: Number of digits integer printed
-*/
-int op_in(va_list arg)
-{
-	int num;
-	int digits;
-
-	num = va_arg(arg, int);
-	if (!num)
-		return (0);
-	if (num == 0)
-		digits = 1;
-
-	if (num < 0)
-	{
-		num = -num;
-		_putchar('-');
-		digits = 1;
-	}
-
-	print_number(num);
-
-	while (num % 10 != 0)
-	{
-		digits++;
-		num = num / 10;
-	}
-
-	return (digits);
-}

@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 
 	specifier select_spec[] = {
 		{"c", op_ch}, {"s", op_st}, {"d", op_nu},
-		{"i", op_in}, {"f", op_fl}, {NULL, NULL}};
+		{"i", op_nu}, {"f", op_fl}, {NULL, NULL}};
 
 	n_words = 0;
 	n_func = 5;
