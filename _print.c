@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-	for (i = 0; format[i] && format != NULL; i++)
+	for (i = 0; format[i] != '\0' && format != NULL; i++)
 	{
 		if (format[i] != '%')
 			n_words = n_words + _putchar(format[i]);
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 		}
 	}
 
-	
+	_putchar('\0');
 	va_end(arg);
 	return (n_words);
 }
