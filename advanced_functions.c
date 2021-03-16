@@ -37,3 +37,53 @@ int op_fl(va_list arg)
 
 	return (point + 1 + 6);
 }
+
+
+/**
+* op_bi - Print a binary number
+* @arg: variadic arguments
+*
+* Description: Function to print a decimal number in binary notation
+* Return: Number of digits printed
+*/
+int op_bi(va_list arg)
+{
+	int num, i, j, counter, copy_number, digits;
+	int *buffer;
+
+	num = va_arg(arg, unsigned int);
+	digits = 0;
+
+	if (!num)
+		return (0);
+
+	counter = 0;
+	copy_number = num;
+
+	for (i = 0; num != 0; i++)
+	{
+		num = num / 2;
+		counter++;
+	}
+
+	buffer = malloc(sizeof(int) * (counter));
+	if (buffer == NULL)
+	{
+		return (0);
+	}
+
+	for (i = 0; copy_number > 0; i++)
+	{
+		buffer[i] = copy_number % 2;
+		copy_number = copy_number / 2;
+	}
+
+	for (j = (counter - 1); j >= 0; j--)
+	{
+		_putchar(buffer[j] + '0');
+	}
+
+	digits = i;
+	free(buffer);
+	return (digits);
+}

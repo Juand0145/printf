@@ -12,7 +12,10 @@ int _printf(const char *format, ...);
 int op_ch(va_list arg);
 int op_st(va_list arg);
 int op_nu(va_list arg);
+
+/*Advanced functions*/
 int op_fl(va_list arg);
+int op_bi(va_list arg);
 
 /*Other useful functions*/
 int count(const char *str);

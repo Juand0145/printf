@@ -16,11 +16,11 @@ int _printf(const char *format, ...)
 	va_list arg;
 
 	specifier select_spec[] = {
-		{"c", op_ch}, {"s", op_st}, {"d", op_nu},
-		{"i", op_nu}, {"f", op_fl}, {NULL, NULL}};
+		{"c", op_ch}, {"s", op_st}, {"d", op_nu}, {"i", op_nu},
+		{"f", op_fl}, {"b", op_bi}, {NULL, NULL}};
 
 	n_words = 0;
-	n_func = 5;
+	n_func = 6;
 	if (format == NULL)
 		return (0);
 	va_start(arg, format);
