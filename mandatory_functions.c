@@ -31,13 +31,8 @@ int op_st(va_list arg)
 
 	if (str2 == NULL)
 	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('u');
-		_putchar('l');
-		_putchar('l');
-		_putchar(')');
-		return (0);
+		_printf("(null)");
+		return (6);
 	}
 
 	for (i = 0; str2[i] != '\0'; i++)
