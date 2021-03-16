@@ -56,10 +56,6 @@ int op_nu(va_list arg)
 
 	num = va_arg(arg, int);
 
-	if (!num)
-		return (0);
-	if (num == 0)
-		digits = 1;
 	if (num < 0)
 	{
 		num = -num;
@@ -74,6 +70,8 @@ int op_nu(va_list arg)
 		digits++;
 		num = num / 10;
 	}
+
+	digits += 1;
 
 	return (digits);
 }
