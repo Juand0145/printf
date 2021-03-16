@@ -32,16 +32,10 @@ int _printf(const char *format, ...)
 					n_words += select_spec[j].f(arg);
 					break;
 				}
-				else if (format[i + 1] != select_spec[j].ch[0] && format[i + 1] != '\0')
-				{
-					n_words = n_words + _putchar(format[i]);
-					_putchar(format[i + 1]);
-					n_words++;
-					break;
-				}
 			}
 			if (format[i + 1] == '%')
-				_putchar('%');
+				n_words = n_words + _putchar('%');
+
 			else if (i == 0 && format[i + 1] == '\0')
 				return (-1);
 			i++;
