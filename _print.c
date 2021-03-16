@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 				}
 			}
 			if (format[i + 1] == '%')
-				n_words = n_words + _putchar('%');
+				_putchar('%');
 			else if (i == 0 && format[i + 1] == '\0')
 				return (-1);
 			i++;
