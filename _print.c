@@ -43,7 +43,8 @@ int _printf(const char *format, ...)
 
 			if (format[i + 1] == '%')
 				n_words = n_words + _putchar('%');
-
+			else
+				return (-1);
 			i++;
 		}
 	}
