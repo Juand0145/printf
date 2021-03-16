@@ -52,12 +52,16 @@ int op_bi(va_list arg)
 	int *buffer;
 
 	num = va_arg(arg, unsigned int);
+	counter = 0;
+	copy_number = num;
 	digits = 0;
 
-	if (!num)
-		return (0);
+	if (num == 0)
+	{
+		_putchar(0 + '0');
+		return (1);
+	}
 
-	counter = 0;
 	copy_number = num;
 
 	for (i = 0; num != 0; i++)
@@ -68,9 +72,7 @@ int op_bi(va_list arg)
 
 	buffer = malloc(sizeof(int) * (counter));
 	if (buffer == NULL)
-	{
 		return (0);
-	}
 
 	for (i = 0; copy_number > 0; i++)
 	{
@@ -79,9 +81,7 @@ int op_bi(va_list arg)
 	}
 
 	for (j = (counter - 1); j >= 0; j--)
-	{
 		_putchar(buffer[j] + '0');
-	}
 
 	digits = i;
 	free(buffer);
