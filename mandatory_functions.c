@@ -77,6 +77,5 @@ int op_nu(va_list arg)
 		num = num / 10;
 	}
 
-	digits += 1;
 	return (digits);
 }
