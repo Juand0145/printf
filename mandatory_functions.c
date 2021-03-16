@@ -52,7 +52,7 @@ int op_st(va_list arg)
 int op_nu(va_list arg)
 {
 	int num;
-	int digits;
+	int digits = 0;
 
 	num = va_arg(arg, int);
 
