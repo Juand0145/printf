@@ -1,4 +1,4 @@
-.TH "_printf" "1" "3 march 2021" "version 1.0" "_PRINTF man page"
+.TH "_printf" "1" "13 march 2021" "version 1.0" "_PRINTF man page"
 .hy
 .SH NAME
 .PP
@@ -8,13 +8,13 @@ _printf \[en] print data with a respective format.
 \f[B]#include "holberton.h"\f[R]
 .PP
 \f[B]_printf\f[R] FORMAT [ARGUMENT]
-.PD 0
-.P
-.PD
-.\f[B]int _printf(const char *format, ...);\f[R]
+.PP
+\f[B]int _printf(const char *format, ...);\f[R]
+.PP
 .SH DESCRIPTION
 .PP
 This function prints all arguments to variadic function considering the format.
+.PP
 \f[B]FORMATS:\f[R]
 .PP
 \f[B]%\f[R] - Prints % character.
@@ -23,17 +23,11 @@ This function prints all arguments to variadic function considering the format.
 .PP
 \f[B]c\f[R] - Prints a single character.
 .PP
-\f[B]d\f[R] - Prints numbers.
-.PP
-\f[B]i\f[R] - Print a integer.
+\f[B]d , i\f[R] - Prints numbers.
 .PP
 \f[B]b\f[R] - Prints a integer in binary format.
 .PP
-\f[B]u\f[R] - Prints a unsigned integer.
-.PP
-\f[B]o\f[R] - Prints a integer in octal format.
-.PP
-\f[B]x , X\f[R] - Converts a character to hex format.
+\f[B]R\f[R] - coverts a string to rot13 format.
 .PP
 .SH AUTHOR
 .PP

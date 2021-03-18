@@ -13,10 +13,9 @@ char rotcode[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 char *str = va_arg(agr, char*);
 i = j = count = 0;
 
-if (!str)
+if (str == NULL)
 {
-	_printf("(null)");
-	return (6);
+	str = "(null)";
 }
 for (; str[i]; i++)
 {
