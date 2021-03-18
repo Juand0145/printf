@@ -15,7 +15,8 @@ i = j = count = 0;
 
 if (str == NULL)
 {
-	str = "(null)";
+	_printf("(null)");
+	return (6);
 }
 for (; str[i]; i++)
 {
